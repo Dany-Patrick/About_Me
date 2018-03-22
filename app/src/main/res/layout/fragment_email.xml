@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.dany.abautme.EmailFragment"
+    android:layout_margin="10dp">
+
+    <Button
+        android:layout_margin="10dp"
+        style="@style/AccentButton"
+        android:id="@+id/escribemeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escribirme ahora"
+        android:hint=""/>
+    <EditText
+        android:layout_margin="10dp"
+        android:layout_below="@id/escribemeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:visibility="gone"
+        />
+    <Button
+        android:layout_margin="10dp"
+        android:layout_below="@id/editText1"
+        style="@style/AccentButton"
+        android:id="@+id/enviarBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escribirme ahora"
+        android:visibility="gone"
+        android:hint=""/>
+
+
+</RelativeLayout>

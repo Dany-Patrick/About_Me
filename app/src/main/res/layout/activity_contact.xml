@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.dany.abautme.ContactActivity"
+    android:layout_margin="20dp">
+
+    <!-- -->
+    <TextView
+        android:id="@+id/linkedin"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_linkedin_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Linkedin"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/telefono"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="+569 9 4962 2101"/>
+
+    <fragment
+        android:id="@+id/Fragment"
+        android:name="cl.dany.abautme.EmailFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

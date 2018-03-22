@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cl.dany.abautme.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:background="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:text=" \n Hola soy Daniel Vergara \n actualmente trabajo en la Universidad Católica \n como Asistente Técnico y Desarrollador \n de el OPED. \n"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <TextView
+                android:id="@+id/ancla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AREA"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+
+              />
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AÑOS"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                />
+            <TextView
+                android:layout_below="@id/ancla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ancla2"
+                android:text="PHP"/>
+            <TextView
+                android:layout_below="@id/ancla"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:text="3"/>
+            <TextView
+                android:layout_below="@id/ancla2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="C#"/>
+            <TextView
+                android:layout_below="@id/ancla2"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:text="1"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
