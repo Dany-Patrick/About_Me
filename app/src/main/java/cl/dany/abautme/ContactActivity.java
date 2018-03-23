@@ -1,13 +1,19 @@
 package cl.dany.abautme;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 public class ContactActivity extends AppCompatActivity {
+
+    final static int CALL= 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +32,22 @@ public class ContactActivity extends AppCompatActivity {
             }
         });
         phone.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:" + phone.getText().toString()));
-                startActivity(callIntent);
+
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    String [] permiso = {Manifest.permission.ACCOUNT_MANAGER };
+                    requestPermissions(permiso, CALL);
+                    return;
+                }
+                else{
+
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse("tel:" + phone.getText().toString()));
+                    startActivity(callIntent);
+                }
+
             }
         });
 

@@ -28,7 +28,7 @@
         android:id="@+id/enviarBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Escribirme ahora"
+        android:text="Enviar"
         android:visibility="gone"
         android:hint=""/>
 
